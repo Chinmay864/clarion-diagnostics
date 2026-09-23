@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarion Diagnostics - Laboratory Tests</title>
+
+  <style>
+    /* Global Theme & Typography (Task 3) */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fafc;
+      color: #334155;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page Header */
+    header {
+      background-color: #0f4c81;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 15px;
+      border-bottom: 4px solid #0284c7;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #ffffff;
+    }
+
+    header h2 {
+      margin-top: 5px;
+      color: #e0f2fe;
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+
+    /* Main Container Layout (Task 9) */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 30px auto;
+    }
+
+    .section-title {
+      color: #0f4c81;
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 8px;
+      margin-top: 35px;
+    }
+
+    /* Workflow Numbered List Styling */
+    .workflow-list {
+      list-style: none;
+      counter-reset: step-counter;
+      padding: 0;
+    }
+
+    .workflow-list li {
+      counter-increment: step-counter;
+      background-color: #ffffff;
+      margin-bottom: 10px;
+      padding: 12px 18px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      border-left: 5px solid #0f4c81;
+      font-weight: 600;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      display: flex;
+      align-items: center;
+    }
+
+    .workflow-list li::before {
+      content: counter(step-counter);
+      background-color: #0284c7;
+      color: #ffffff;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      font-size: 0.9rem;
+    }
+
+    /* Test Profiles Card Grid (Task 5 - CSS Box Model) */
+    .test-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .test-card {
+      flex: 1 1 calc(33.333% - 15px);
+      min-width: 240px;
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-sizing: border-box;
+      font-weight: 600;
+      color: #0f4c81;
+    }
+
+    .test-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(2, 132, 199, 0.15);
+      border-color: #0284c7;
+    }
+
+    /* Definition List / Glossary Styling */
+    .glossary-card {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    dt {
+      color: #0284c7;
+      font-size: 1.1rem;
+      margin-top: 12px;
+    }
+
+    dd {
+      margin-left: 0;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #475569;
+    }
+
+    /* Callout & Highlight Boxes (Task 10) */
+    .info-box {
+      background-color: #e0f2fe;
+      border-left: 5px solid #0284c7;
+      padding: 12px 18px;
+      border-radius: 6px;
+      margin-top: 25px;
+    }
+
+    .warning-box {
+      background-color: #fff7ed;
+      border-left: 5px solid #f97316;
+      padding: 12px 18px;
+      border-radius: 6px;
+      margin-top: 15px;
+    }
+
+    mark {
+      background-color: transparent;
+      color: #c2410c;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clarion Diagnostics</h1>
+    <h2>Laboratory Testing Services</h2>
+  </header>
+
+  <div class="container">
+    
+    <h2 class="section-title">Patient Testing Workflow</h2>
+    <ol class="workflow-list">
+      <li>Patient Registration & Intake</li>
+      <li>Sample Collection</li>
+      <li>Analytical Laboratory Testing</li>
+      <li>Digital Report Generation</li>
+      <li>Medical Review & Consultation</li>
+    </ol>
+
+    <h2 class="section-title">Available Test Profiles</h2>
+    <ul class="test-grid">
+      <li class="test-card">Complete Blood Analysis</li>
+      <li class="test-card">Comprehensive Urinalysis</li>
+      <li class="test-card">Thyroid Profile (T3, T4, TSH)</li>
+      <li class="test-card">Liver Function Panel (LFT)</li>
+      <li class="test-card">Renal Function Panel (KFT)</li>
+      <li class="test-card">Cardiovascular Lipid Profile</li>
+      <li class="test-card">Glycemia & Diabetes Screening</li>
+    </ul>
+
+    <h2 class="section-title">Test Information & Glossary</h2>
+    <dl class="glossary-card">
+      <dt><b>CBC</b></dt>
+      <dd>Complete Blood Count evaluates overall health and measures key cellular components.</dd>
+      
+      <dt><b>HbA1c</b></dt>
+      <dd>Glycated Hemoglobin measures average blood glucose levels over the preceding 2 to 3 months.</dd>
+      
+      <dt><b>LFT</b></dt>
+      <dd>Liver Function Test assesses liver enzymes, proteins, and bilirubin levels.</dd>
+      
+      <dt><b>KFT</b></dt>
+      <dd>Kidney Function Test evaluates renal filtration efficiency and fluid balance.</dd>
+      
+      <dt><b>ECG</b></dt>
+      <dd>Electrocardiogram records the electrical activity and rhythm of the heart.</dd>
+    </dl>
+
+    <div class="info-box">
+      <p style="margin: 0;">
+        <b>Important:</b> <i>Please follow all fasting and pre-test instructions carefully.</i>
+      </p>
+    </div>
+
+    <div class="warning-box">
+      <p style="margin: 0;">
+        <mark>Proper patient preparation is essential for accurate diagnostic results.</mark>
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>

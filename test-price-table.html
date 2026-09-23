@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarion Diagnostics - Test Price Table</title>
+
+  <style>
+    /* Global Theme & Typography (Task 3) */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fafc;
+      color: #334155;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page Header */
+    header {
+      background-color: #0f4c81;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 15px;
+      border-bottom: 4px solid #0284c7;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #ffffff;
+    }
+
+    header h2 {
+      margin-top: 5px;
+      color: #e0f2fe;
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+
+    /* Container Layout (Task 9) */
+    .container {
+      width: 90%;
+      max-width: 950px;
+      margin: 30px auto;
+    }
+
+    /* Table Container Card (Task 5 & Task 7/8) */
+    .table-card {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    caption {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #0f4c81;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    thead tr {
+      background-color: #0f4c81;
+      color: #ffffff;
+    }
+
+    thead th {
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* Zebra Striping & Hover State */
+    tbody tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    tbody tr:hover {
+      background-color: #f0f9ff;
+    }
+
+    tfoot tr {
+      background-color: #f1f5f9;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    tfoot td {
+      border-bottom: none;
+      padding: 12px 15px;
+    }
+
+    .price {
+      font-weight: 600;
+      color: #0284c7;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background-color: #e0f2fe;
+      color: #0369a1;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clarion Diagnostics</h1>
+    <h2>Laboratory Test Price List</h2>
+  </header>
+
+  <div class="container">
+    <div class="table-card">
+      <table>
+        <caption>Clarion Diagnostics - Test Charges</caption>
+        <thead>
+          <tr>
+            <th>Test Code</th>
+            <th>Test Name</th>
+            <th>Department</th>
+            <th>Cost</th>
+            <th>Sample Type</th>
+            <th>Report Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>BL001</td>
+            <td>CBC</td>
+            <td rowspan="2">Hematology</td>
+            <td class="price">₹300</td>
+            <td>Blood</td>
+            <td><span class="badge">Same Day</span></td>
+          </tr>
+          <tr>
+            <td>BL002</td>
+            <td>HbA1c</td>
+            <td class="price">₹400</td>
+            <td>Blood</td>
+            <td><span class="badge">Same Day</span></td>
+          </tr>
+          <tr>
+            <td>UR001</td>
+            <td>Urine Routine</td>
+            <td>Clinical Pathology</td>
+            <td class="price">₹200</td>
+            <td>Urine</td>
+            <td><span class="badge">Same Day</span></td>
+          </tr>
+          <tr>
+            <td>LF001</td>
+            <td>LFT</td>
+            <td>Biochemistry</td>
+            <td class="price">₹700</td>
+            <td>Blood</td>
+            <td>24 Hours</td>
+          </tr>
+          <tr>
+            <td>KF001</td>
+            <td>KFT</td>
+            <td>Biochemistry</td>
+            <td class="price">₹650</td>
+            <td>Blood</td>
+            <td>24 Hours</td>
+          </tr>
+          <tr>
+            <td>TH001</td>
+            <td>Thyroid Profile</td>
+            <td>Hormones</td>
+            <td class="price">₹800</td>
+            <td>Blood</td>
+            <td>24 Hours</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6">
+              <b>Note:</b> Prices shown are for demonstration purposes.
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>

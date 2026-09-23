@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarion Diagnostics - Test Details</title>
+
+  <style>
+    /* Global Theme & Typography (Task 3) */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fafc;
+      color: #334155;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page Header */
+    header {
+      background-color: #0f4c81;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 15px;
+      border-bottom: 4px solid #0284c7;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #ffffff;
+    }
+
+    header h2 {
+      margin-top: 5px;
+      color: #e0f2fe;
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+
+    /* Main Container Layout (Task 9) */
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 30px auto;
+    }
+
+    .section-title {
+      color: #0f4c81;
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 8px;
+      margin-top: 25px;
+      margin-bottom: 20px;
+    }
+
+    /* Card Details Layout (Task 5 - CSS Box Model) */
+    .detail-card {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+
+    .detail-row {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 12px 0;
+      border-bottom: 1px solid #f1f5f9;
+      align-items: baseline;
+    }
+
+    .detail-row:last-child {
+      border-bottom: none;
+    }
+
+    .detail-label {
+      flex: 1 1 200px;
+      font-weight: bold;
+      color: #0284c7;
+    }
+
+    .detail-value {
+      flex: 2 1 300px;
+      color: #334155;
+    }
+
+    /* Important Instructions Block (Task 10) */
+    .instructions-card {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .instructions-card h3 {
+      margin-top: 0;
+      color: #0f4c81;
+    }
+
+    .info-box {
+      background-color: #e0f2fe;
+      border-left: 5px solid #0284c7;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+
+    .warning-box {
+      background-color: #fff7ed;
+      border-left: 5px solid #f97316;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+
+    mark {
+      background-color: transparent;
+      color: #c2410c;
+      font-weight: bold;
+    }
+
+    .note-text {
+      font-size: 0.88rem;
+      color: #64748b;
+      margin-top: 15px;
+      display: block;
+    }
+
+    .contact-footer {
+      text-align: center;
+      margin-top: 30px;
+      font-weight: 600;
+      color: #0f4c81;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clarion Diagnostics</h1>
+    <h2>Diagnostic Test Details</h2>
+  </header>
+
+  <div class="container">
+    
+    <h2 class="section-title">Urinalysis Routine Screening</h2>
+
+    <!-- Main Test Information Card -->
+    <div class="detail-card">
+      <div class="detail-row">
+        <div class="detail-label">Test Name:</div>
+        <div class="detail-value">Routine Urinalysis Panel</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Purpose:</div>
+        <div class="detail-value">To analyze urine composition and detect physical, chemical, and microscopic indicators of metabolic or renal health.</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Sample Required:</div>
+        <div class="detail-value">Mid-stream urine specimen in a sterile container.</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Preparation Instructions:</div>
+        <div class="detail-value">Collect the sample in a clean container following standard hygiene guidelines.</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Normal Reference Range:</div>
+        <div class="detail-value">Standard reference ranges vary based on individual physiological parameters and clinical testing methods.</div>
+      </div>
+
+      <div class="detail-row">
+        <div class="detail-label">Report Delivery Time:</div>
+        <div class="detail-value">Same-day digital delivery for routine processing.</div>
+      </div>
+    </div>
+
+    <!-- Patient Instructions Card -->
+    <div class="instructions-card">
+      <h3>Important Patient Instructions</h3>
+      
+      <div class="info-box">
+        <strong>Fasting Requirements:</strong> <em>Fasting may be required depending on accompanying test panels.</em>
+      </div>
+
+      <div class="warning-box">
+        <mark>Please strictly follow all collection instructions provided by the lab.</mark>
+      </div>
+
+      <small class="note-text">
+        Reference intervals may vary across different testing technologies and laboratory equipment.
+      </small>
+    </div>
+
+    <p class="contact-footer">
+      Contact Clarion Diagnostics for additional information or assistance.
+    </p>
+
+  </div>
+
+</body>
+</html>

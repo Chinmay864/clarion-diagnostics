@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarion Diagnostics - Patient Registration</title>
+
+  <style>
+    /* Global Theme & Typography (Task 3) */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fafc;
+      color: #334155;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page Header */
+    header {
+      background-color: #0f4c81;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 15px;
+      border-bottom: 4px solid #0284c7;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #ffffff;
+    }
+
+    header h2 {
+      margin-top: 5px;
+      color: #e0f2fe;
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+
+    /* Container Layout (Task 9) */
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 30px auto;
+    }
+
+    /* Form Container Card (Task 5 - CSS Box Model) */
+    .form-card {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Fieldset & Legend Styling */
+    fieldset {
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 20px 25px 25px 25px;
+      margin-bottom: 25px;
+      background-color: #ffffff;
+    }
+
+    legend {
+      color: #0f4c81;
+      font-weight: bold;
+      font-size: 1.1rem;
+      padding: 0 10px;
+    }
+
+    /* Form Control Layout */
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    /* Inputs, Selects, and Textarea Styling */
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    input[type="file"] {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: #334155;
+      background-color: #f8fafc;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="tel"]:focus,
+    input[type="email"]:focus,
+    input[type="date"]:focus,
+    select:focus {
+      outline: none;
+      border-color: #0284c7;
+      background-color: #ffffff;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+
+    /* Custom File Input Styling */
+    input[type="file"] {
+      padding: 8px 12px;
+      background-color: #ffffff;
+      cursor: pointer;
+    }
+
+    /* Radio Group Styling */
+    .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      padding-top: 4px;
+    }
+
+    .radio-option {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: normal;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .radio-option input[type="radio"] {
+      accent-color: #0284c7;
+      width: 16px;
+      height: 16px;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    /* Action Buttons */
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 12px 32px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+
+    input[type="submit"] {
+      background-color: #0284c7;
+      color: #ffffff;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0369a1;
+    }
+
+    input[type="reset"] {
+      background-color: #64748b;
+      color: #ffffff;
+    }
+
+    input[type="reset"]:hover {
+      background-color: #475569;
+    }
+
+    input[type="submit"]:active,
+    input[type="reset"]:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clarion Diagnostics</h1>
+    <h2>Online Patient Registration</h2>
+  </header>
+
+  <div class="container">
+    <form class="form-card">
+      
+      <!-- Patient Information Fieldset -->
+      <fieldset>
+        <legend>Patient Information</legend>
+        
+        <div class="form-group">
+          <label for="name">Patient Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter full name" autofocus required>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="120" placeholder="Enter age" required>
+          </div>
+
+          <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Gender:</label>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="gender" value="Male" required> Male
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="gender" value="Female"> Female
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="gender" value="Other"> Other
+            </label>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="Enter 10 digit number" pattern="[0-9]{10}" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Test & Appointment Details Fieldset -->
+      <fieldset>
+        <legend>Test & Appointment Details</legend>
+        
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="test">Select Test:</label>
+            <select id="test" name="test" required>
+              <option value="">-- Select Test --</option>
+              <option value="CBC">CBC (Complete Blood Count)</option>
+              <option value="Urine">Urine Routine Examination</option>
+              <option value="HbA1c">HbA1c</option>
+              <option value="LFT">Liver Function Test (LFT)</option>
+              <option value="KFT">Kidney Function Test (KFT)</option>
+              <option value="Thyroid">Thyroid Profile</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="appointment">Preferred Appointment Date:</label>
+            <input type="date" id="appointment" name="appointment" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Sample Collection Preference:</label>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="collection" value="Laboratory" required> At Laboratory
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="collection" value="Home"> Home Collection
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="prescription">Upload Doctor Prescription:</label>
+          <input type="file" id="prescription" name="prescription">
+        </div>
+      </fieldset>
+
+      <!-- Action Buttons -->
+      <div class="button-group">
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>

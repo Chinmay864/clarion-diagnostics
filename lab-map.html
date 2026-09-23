@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarion Diagnostics - Interactive Urine Test Strip</title>
+
+  <style>
+    /* Global Theme & Typography (Task 3) */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fafc;
+      color: #334155;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page Header */
+    header {
+      background-color: #0f4c81;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 15px;
+      border-bottom: 4px solid #0284c7;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #ffffff;
+    }
+
+    header h2 {
+      margin-top: 5px;
+      color: #e0f2fe;
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+
+    /* Container Layout (Task 9) */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+
+    /* Info Callout Box (Task 10) */
+    .info-box {
+      background-color: #e0f2fe;
+      border-left: 5px solid #0284c7;
+      padding: 14px 20px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: 600;
+      color: #0f4c81;
+      margin-bottom: 25px;
+    }
+
+    /* Card Wrapper for Image Map (Task 5 - CSS Box Model) */
+    .map-card {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      overflow-x: auto;
+    }
+
+    .map-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #0f4c81;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clarion Diagnostics</h1>
+    <h2>Interactive Urine Test Strip</h2>
+  </header>
+
+  <div class="container">
+    
+    <div class="info-box">
+      Click on any test pad to view its detailed information in a new tab.
+    </div>
+
+    <!-- Image Map Viewer Card -->
+    <div class="map-card">
+      <img src="https://www.aconlabs.com/wp-content/uploads/2020/06/mission-reagent-parameter-pic.jpg"
+           alt="Urine Test Strip"
+           title="Click on a pad to view information"
+           width="1536"
+           height="1024"
+           usemap="#urineMap">
+    </div>
+
+  </div>
+
+  <!-- Image Map Definitions -->
+  <map name="urineMap">
+    <!-- GLUCOSE -->
+    <area shape="rect"
+          coords="326,198,511,544"
+          href="glucose.html"
+          target="_blank"
+          alt="Glucose"
+          title="Glucose">
+
+    <!-- PROTEIN -->
+    <area shape="rect"
+          coords="558,198,743,544"
+          href="protein.html"
+          target="_blank"
+          alt="Protein"
+          title="Protein">
+
+    <!-- BLOOD -->
+    <area shape="rect"
+          coords="790,198,970,544"
+          href="blood.html"
+          target="_blank"
+          alt="Blood"
+          title="Blood">
+
+    <!-- KETONE -->
+    <area shape="rect"
+          coords="1017,198,1200,544"
+          href="ketone.html"
+          target="_blank"
+          alt="Ketone"
+          title="Ketone">
+
+    <!-- pH -->
+    <area shape="rect"
+          coords="1245,198,1422,544"
+          href="ph.html"
+          target="_blank"
+          alt="pH"
+          title="pH">
+  </map>
+
+  <footer>
+    <p><b>Clarion Diagnostics</b></p>
+    <p>Precision Diagnostics & Quality Healthcare</p>
+  </footer>
+
+</body>
+</html>

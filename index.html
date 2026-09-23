@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarion Diagnostics - Home</title>
+  
+  <style>
+    /* Global & Theme Styling (Task 3) */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fafc;
+      color: #334155;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h3 {
+      color: #0f4c81;
+    }
+
+    /* Navigation Bar Styling (Task 2) */
+    nav {
+      background-color: #0284c7;
+      padding: 12px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 8px 14px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #0369a1;
+      color: #e0f2fe;
+      border-radius: 4px;
+      text-decoration: underline;
+    }
+
+    /* Flexible Layout Container (Task 9) */
+    .layout-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      gap: 20px;
+    }
+
+    section.content {
+      flex: 3;
+      min-width: 300px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #e2e8f0;
+    }
+
+    aside.sidebar {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    /* Sidebar Card Styling (Task 4) */
+    .sidebar-card {
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    .sidebar-card h3 {
+      margin-top: 0;
+    }
+
+    .sidebar-card ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar-card li {
+      padding: 10px 14px;
+      margin-bottom: 6px;
+      border-bottom: 1px solid #f1f5f9;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .sidebar-card li:hover {
+      background-color: #e0f2fe;
+      color: #0284c7;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* Highlighting Glowing Offer Box (Task 10) */
+    .offer-box {
+      background-color: #fff7ed;
+      border: 2px solid #f97316;
+      border-radius: 10px;
+      padding: 15px;
+      width: 85%;
+      margin: 20px auto 0 auto;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #c2410c;
+      animation: glowing-offer 2s infinite alternate;
+    }
+
+    @keyframes glowing-offer {
+      0% {
+        box-shadow: 0 0 5px #f97316;
+      }
+      100% {
+        box-shadow: 0 0 18px #ea580c;
+      }
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #0f4c81;
+      color: #ffffff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header with Inline CSS (Task 1) -->
+  <header style="background-color: #0f4c81; padding: 25px; border-bottom: 4px solid #0284c7; color: white; text-align: center;">
+    <h1 style="color: #ffffff; text-align: center; margin: 0;">Clarion Diagnostics</h1>
+    <h3 style="color: #e0f2fe; text-align: center; margin-top: 5px;">Precision Diagnostics & Quality Healthcare</h3>
+    <p style="color: #f0f9ff; text-align: center; border: 1px solid rgba(255,255,255,0.3); padding: 10px; width: 60%; margin: 10px auto;">
+      K. J. Somaiya School of Engineering, Mumbai-77<br>
+      Somaiya Vidyavihar University | Department of Computer Engineering<br>
+      Web Development Laboratory-26-27
+    </p>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="laboratory-tests.html">Laboratory Tests</a></li>
+      <li><a href="test-details.html">Test Details</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="lab-map.html">Urine Test Strip</a></li>
+      <li><a href="test-price-table.html">Test Prices</a></li>
+      <li><a href="patient-registration.html">Registration</a></li>
+      <li><a href="health-information.html">Health Information</a></li>
+      <li><a href="media.html">Media</a></li>
+    </ul>
+  </nav>
+
+  <!-- Special Offer Section -->
+  <div class="offer-box">
+    🎉 Special Discount: 20% OFF on Full Body Health Packages This Month!
+  </div>
+
+  <!-- Page Layout Wrapper -->
+  <div class="layout-container">
+    
+    <!-- Main Content -->
+    <section class="content">
+      <h2>Welcome to Clarion Diagnostics</h2>
+      <article>
+        <p>Welcome to <b>Clarion Diagnostics</b>.</p>
+        <p>We deliver precise, timely, and comprehensive laboratory diagnostic services to empower patients and medical professionals alike.</p>
+      </article>
+
+      <div id="reports">
+        <h2>Patient Reports</h2>
+        <p>Secure diagnostic reports are generated promptly following test analysis.</p>
+      </div>
+
+      <div id="contact">
+        <h2>Get In Touch</h2>
+        <p>
+          Clarion Diagnostics<br>
+          Mumbai, Maharashtra<br>
+          Phone: +91 98765 43210
+        </p>
+      </div>
+    </section>
+
+    <!-- Sidebar Section -->
+    <aside class="sidebar sidebar-card">
+      <h3>Core Services</h3>
+      <ul>
+        <li>Advanced Blood Pathology</li>
+        <li>Urinalysis & Cultures</li>
+        <li>Full Body Health Packages</li>
+        <li>Digital Diagnostic Reports</li>
+      </ul>
+    </aside>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Clarion Diagnostics. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarion Diagnostics - Clinical Laboratory</title>
+
+  <style>
+    /* Global Theme & Typography (Task 3) */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fafc;
+      color: #334155;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page Header */
+    header {
+      background-color: #0f4c81;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 15px;
+      border-bottom: 4px solid #0284c7;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #ffffff;
+    }
+
+    header h2 {
+      margin-top: 5px;
+      color: #e0f2fe;
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+
+    /* Container Layout (Task 9) */
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 30px auto;
+    }
+
+    /* Feature Card Layout (Task 5 - CSS Box Model) */
+    .lab-card {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .image-wrapper {
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto 25px auto;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border: 2px solid #e2e8f0;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .image-wrapper:hover img {
+      transform: scale(1.03);
+    }
+
+    /* Content Details Styling */
+    .lab-details {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .lab-details h3 {
+      color: #0f4c81;
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 8px;
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    .lab-details p {
+      line-height: 1.6;
+      color: #334155;
+      font-size: 1.05rem;
+      margin-bottom: 15px;
+    }
+
+    /* Back Navigation Button */
+    .back-btn-wrapper {
+      text-align: left;
+      margin-top: 25px;
+      padding-top: 15px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .back-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0284c7;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #0369a1;
+      transform: translateX(-3px);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clarion Diagnostics</h1>
+    <h2>Clinical Laboratory</h2>
+  </header>
+
+  <div class="container">
+    <div class="lab-card">
+      
+      <!-- Featured Image Container -->
+      <div class="image-wrapper">
+        <img src="https://images.squarespace-cdn.com/content/v1/56a042fb25981d9326c9bbdb/653b8a83-2aaf-41e8-9e2e-8cbee3e1abdf/Distinguishing+Between+Clinical+and+Laboratory+Research.jpg" 
+             alt="Clinical Laboratory">
+      </div>
+
+      <!-- Facility Information -->
+      <div class="lab-details">
+        <h3>About the Clinical Laboratory</h3>
+        <p>
+          Our clinical laboratory is a modern diagnostic facility where accurate testing is performed on clinical specimens.
+        </p>
+        <p>
+          Laboratory testing provides healthcare professionals with vital insights needed for accurate medical diagnosis and patient management.
+        </p>
+      </div>
+
+      <!-- Navigation Link -->
+      <div class="back-btn-wrapper">
+        <a href="gallery.html" class="back-btn">&larr; Back to Gallery</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarion Diagnostics - Blood Pad</title>
+
+  <style>
+    /* Global Theme & Typography (Task 3) */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8fafc;
+      color: #334155;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page Header */
+    header {
+      background-color: #0f4c81;
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 15px;
+      border-bottom: 4px solid #0284c7;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      color: #ffffff;
+    }
+
+    header h2 {
+      margin-top: 5px;
+      color: #e0f2fe;
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+
+    /* Container Layout (Task 9) */
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 30px auto;
+    }
+
+    /* Detail Card Styling (Task 5 - CSS Box Model) */
+    .info-card {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .info-card h3 {
+      color: #0f4c81;
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 8px;
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    .info-card p {
+      line-height: 1.6;
+      color: #334155;
+      font-size: 1.05rem;
+      margin-bottom: 15px;
+    }
+
+    /* Back Navigation Button */
+    .back-btn-wrapper {
+      margin-top: 25px;
+      padding-top: 15px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .back-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #0284c7;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #0369a1;
+      transform: translateX(-3px);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Clarion Diagnostics</h1>
+    <h2>Blood Test Pad</h2>
+  </header>
+
+  <div class="container">
+    <div class="info-card">
+      <h3>Blood Analysis</h3>
+      <p>
+        The blood reagent pad on the urine test strip detects intact red blood cells, free hemoglobin, or myoglobin in a urine specimen.
+      </p>
+      <p>
+        The pad undergoes a color shift from orange to green or dark blue, indicating potential hematuria or kidney/urinary tract conditions when evaluated against the color chart.
+      </p>
+
+      <!-- Navigation Link -->
+      <div class="back-btn-wrapper">
+        <a href="lab-map.html" class="back-btn">&larr; Back to Urine Test Strip</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
